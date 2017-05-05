@@ -1,0 +1,23 @@
+.titleInfo{
+	font-size: 20px;
+	float: right;
+	cursor:pointer;
+}
+
+.page-header a{
+	text-decoration: none;
+}
+
+.titleMargin{
+	margin-top: 30px;
+}
+
+.logoutMargin{
+	margin-right: 30px;
+	margin-top: 30px;
+}
+
+.input-group-addon{
+	width: 100px;
+	max-width: 100px;
+}
