@@ -15,9 +15,23 @@ $(function(){
 	$("#uname").text("您好，"+user.uname);
 	
 	$("#logout").click(function(e){
-		localStorage.clear();
-		
-		location.href="login.html";
+		$.ajax({
+			type:"post",
+			url:"http://192.168.1.66:3001/user/logout",
+			async:true,
+			data:JSON.parse(localStorage.getItem("user")),
+			success:function(data) {
+				if (data.msg) {
+					$.alert({
+						title: '警告',
+						content: data.msg
+					});
+				} else{	
+					localStorage.clear();
+					location.href="login.html";
+				}
+			}
+		});
 	});
 	
 //	$("#modifyPwd").click(function(e){
@@ -65,21 +79,27 @@ $(function(){
 		}
 		
 		var data = {userid:user.uid,oldpwd:oldpwd,newpwd:newpwd,renewpwd:renewpwd};
-//		$.post("url",data,function(err,result){
-//			if (err) {
-//				$.alert({
-//					title: '警告',
-//					content: err.msg
-//				});
-//			} else{
-//				$.alert({
-//				    title: '提示',
-//				    content: '修改成功',
-//				    confirm: function(){
-//				        location.href="login.html";
-//				    }
-//				});
-//			}
-//		});
+		$.ajax({
+			type:"post",
+			url:"http://192.168.1.66:3001/user/modifypwd",
+			async:true,
+			data:data,
+			success:function(data) {
+				if (data.msg){
+					$.alert({
+						title: '警告',
+						content: data.msg
+					});
+				} else{
+					$.alert({
+					    title: '提示',
+					    content: '修改成功',
+					    confirm: function(){
+					        location.href="login.html";
+					    }
+					});
+				}
+			}
+		});
 	})
 });

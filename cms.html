@@ -7,11 +7,11 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="https://cdn.bootcss.com/jquery-confirm/3.2.0/jquery-confirm.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="css/info.css" />
+		<link rel="stylesheet" type="text/css" href="css/cms.css" />
 	</head>
 
 	<body>
-		<div class="page-header" style="padding:0;margin:0;background-color: #00b4ef;">
+		<div class="page-header">
 			<img src="images/logo.png" />
 			<a id="logout" class="navbar-link titleInfo logoutMargin fa fa-sign-out">&nbsp;&nbsp;退出</a>
 			<span class="titleInfo titleMargin fa">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
@@ -19,11 +19,57 @@
 			<span class="titleInfo titleMargin fa">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 			<span id="uname" class="titleInfo titleMargin fa"></span>
 		</div>
-		
-		<div class="container">
 
+		<div class="floatLeft">
+			<ul class="nav nav-list bs-docs-sidenav affix-top">
+				<li class="active">
+					<a id="infoMenu" class="fa fa-newspaper-o">资讯管理</a>
+				</li>
+				<li class="">
+					<a id="advMenu" class="fa fa-file-image-o">广告管理</a>
+				</li>
+				<li class="">
+					<a id="authMenu" class="fa fa-cog">权限管理</a>
+				</li>
+				<li class="">
+					<a id="logMenu" class="fa fa-pencil-square-o">操作日志</a>
+				</li>
+			</ul>
 		</div>
-
+		
+		<!--<div class="floatLeft">
+			<div>
+				<ul id="myTab" class="nav nav-tabs">
+					<li class="active">
+						<a href="#publishInfo" data-toggle="tab">行业资讯列表</a>
+					</li>
+					<li>
+						<a href="#draftInfo" data-toggle="tab">草稿</a>
+					</li>
+					<li>
+						<a href="#pulloffInfo" data-toggle="tab">下架列表</a>
+					</li>
+					<li>
+						<a href="#addInfo" data-toggle="tab">添加资讯</a>
+					</li>
+				</ul>
+			</div>
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane fade in active" id="publishInfo">
+					<p>菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+				</div>
+				<div class="tab-pane fade" id="draftInfo">
+					<p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+				</div>
+				<div class="tab-pane fade" id="pulloffInfo">
+					<p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+				</div>
+				<div class="tab-pane fade" id="addInfo">
+					<p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。</p>
+				</div>
+			</div>
+		</div>-->
+		
 		<div id="modPassword" class="modal fade" style="display: none; ">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -33,16 +79,16 @@
 							<h3>修改密码</h3>
 						</div>
 						<div class="modal-body">
-							<div class="input-group">
-								<span class="input-group-addon" >旧密码</span>
+							<div class="input-group pwd">
+								<span class="input-group-addon">旧密码</span>
 								<input type="password" maxlength="16" id="oldpwd" class="form-control" aria-describedby="basic-addon1">
 							</div>
-							<div class="input-group">
-								<span class="input-group-addon" >新密码</span>
+							<div class="input-group pwd">
+								<span class="input-group-addon">新密码</span>
 								<input type="password" maxlength="16" id="newpwd" class="form-control" aria-describedby="basic-addon1">
 							</div>
-							<div class="input-group">
-								<span class="input-group-addon" >重复新密码</span>
+							<div class="input-group pwd">
+								<span class="input-group-addon">重复新密码</span>
 								<input type="password" maxlength="16" id="renewpwd" class="form-control" aria-describedby="basic-addon1">
 							</div>
 						</div>
@@ -59,7 +105,9 @@
 		<!--<script src="https://cdn.bootcss.com/bootstrap-modal/2.2.6/js/bootstrap-modal.min.js"></script>-->
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdn.bootcss.com/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
-		<script src="js/cms.js"></script>
+		<script src="js/cms.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/menu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/info.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
