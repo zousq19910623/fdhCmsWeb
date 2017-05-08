@@ -1,0 +1,9 @@
+#infoTab,
+#advTab{
+	padding: 10px 30px;
+	font-size: 18px;
+}
+
+.table-striped a{
+	cursor: pointer;
+}
