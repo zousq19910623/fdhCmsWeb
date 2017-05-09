@@ -1,38 +1,96 @@
-.titleInfo {
+/*登录界面css*/
+
+.header{
+	background-color: #5687e7;
 	font-size: 20px;
-	float: right;
+	height: 64px;
+	padding-top: 15px;
+}
+
+.header a,
+.header span{
+	color: #f2f5fa;
+}
+
+.header img{
+	margin-left: 30px;
+}
+
+.header span,
+.user-a-link{
+	display:block;
+	float:right;
+}
+
+.user-a-link {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user-a-link a {
+	padding-left: 38px;
 	cursor: pointer;
-}
-
-.page-header{
-	padding:0;
-	margin:0;
-	background-color: #00b4ef;
-	overflow: auto;
-}
-
-.page-header a {
 	text-decoration: none;
 }
 
-.titleMargin {
-	margin-top: 30px;
+.user-a-link .icon {
+	width: 24px;
+	height: 24px;
+	margin: 5px 0px 0px 20px;
+	background-color: #ffffff;
+	display: inline-block;
+	position: absolute;
 }
 
-.logoutMargin {
-	margin-right: 30px;
-	margin-top: 30px;
+.user-a-link .icon.icon-mod {
+	background: url(../images/modifyPwd.png) no-repeat;
 }
 
-.input-group-addon {
-	width: 100px;
-	max-width: 100px;
+.user-a-link .icon.icon-logout {
+	background: url(../images/quit.png) no-repeat;
+}
+
+/*登录界面css*/
+
+/*修改密码css*/
+
+.modal-header{
+	background-color: #5687e7;
+	text-align: left;
+	height: 36px;
+	color: #f2f5fa;
+	margin-bottom: 10px;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
 }
 
 .pwd {
 	margin-left: 10px;
 	margin-bottom: 10px;
+	margin: 0 auto;
+	padding: 15px;
 }
+
+.warn {
+	font-size: 14px;
+	color: red;
+	text-align: center;
+}
+/*
+.modal-footer{
+	text-align: center;
+}*/
+
+.modal-footer .btn{
+	width: 100px;
+}
+
+#savePwd{
+	background-color: #5687e7;
+	color: #f2f5fa;
+}
+
+/*修改密码css*/
 
 
 /*菜单栏css*/
@@ -77,3 +135,5 @@
 .floatRight{
 	float:right;
 }
+
+/*菜单栏css*/

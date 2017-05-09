@@ -7,7 +7,7 @@ $(function() {
 	
 	$.ajax({
 			type:"post",
-			url:"http://192.168.1.66:3001/cms/getMenu",
+			url:"http://192.168.1.66:3002/cms/getMenu",
 			async:true,
 			data:{userid:localStorage.getItem("user").uid},
 			success:function(data) {

@@ -14,10 +14,8 @@ define(function(require, exports, module) {
 			var username = $('#username').val();
 			var userpwd = $('#userpwd').val()
 			if(username == "" || userpwd == "") {
-				$.alert({
-					title: '提示',
-					content: '账号或密码不能为空！'
-				});
+				$("#warnCode span").text("账号或密码不能为空");
+				$("#warnCode").css("display","block");
 				return false;
 			}
 
@@ -33,7 +31,8 @@ define(function(require, exports, module) {
 				} else {
 					var obj = JSON.parse(result);
 					if(obj.errCode) {
-						alert(obj.errCode + "===" + obj.errMsg);
+						$("#warnCode span").text(obj.errMsg);
+						$("#warnCode").css("display","block");
 					} else {
 						var obj = JSON.parse(result);
 						//返回用户信息
