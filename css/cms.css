@@ -76,10 +76,17 @@
 	color: red;
 	text-align: center;
 }
-/*
+
+.input-group.pwd span{
+	/*span和input对齐方法*/
+	display: inline-block;
+	text-align: right;
+	width: 100px;
+}
+
 .modal-footer{
 	text-align: center;
-}*/
+}
 
 .modal-footer .btn{
 	width: 100px;
@@ -92,15 +99,45 @@
 
 /*修改密码css*/
 
-
 /*菜单栏css*/
+
+.content .menu{
+	margin:0; 
+	padding:0; 
+	font-size:14px;
+	float: left;
+}
+
+.content .menu a{
+	color:#333;
+	text-decoration:none;
+	cursor: pointer;
+}
+
+.content .menu .nav li a{
+	display:block; 
+	width:180px; 
+	background-color:#efefef;
+	text-align: center;
+}
+
+.content .menu .nav li a:hover{
+	background-color:#F60; 
+	color:#fff;
+}
+
+.content .menu .nav .active a{
+	background-color:#F60; 
+	color:#fff;
+}
+
 /*
 .bs-docs-sidenav.affix {
 	top: 40px;
 }*/
 
 /*  >表示第一个子元素  */
-.bs-docs-sidenav>li:first-child>a {
+/*.bs-docs-sidenav>li:first-child>a {
 	-webkit-border-radius: 6px 6px 0 0;
 	-moz-border-radius: 6px 6px 0 0;
 	border-radius: 6px 6px 0 0;
@@ -134,6 +171,6 @@
 
 .floatRight{
 	float:right;
-}
+}*/
 
 /*菜单栏css*/

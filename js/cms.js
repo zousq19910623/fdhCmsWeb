@@ -23,7 +23,7 @@ define(function(require, exports, module) {
 		//获取咨询列表
 		//this.getPublishInfoList();
 		
-		this.bindEvent();
+		self.bindEvent();
 	}
 	
 	Cms.prototype.getMenu = function(user){
@@ -43,7 +43,19 @@ define(function(require, exports, module) {
 		});
 	}
 	
-	Cms.prototype.getPublishInfoList = function(){
+	Cms.prototype.getPublishInfos = function(){
+		
+	}
+	
+	Cms.prototype.getPublishAdvs = function(){
+		
+	}
+	
+	Cms.prototype.getAuths = function(){
+		
+	}
+	
+	Cms.prototype.getOperLog = function(){
 		
 	}
 	
@@ -81,6 +93,15 @@ define(function(require, exports, module) {
 	
 		//修改密码
 		$("#savePwd").click(function(){
+			$.alert({
+				title: '提示',
+			    content: '修改成功',
+			    confirm: function(){
+			    	localStorage.clear();
+			        location.href="login.html";
+			    }
+			});
+			
 			var oldpwd=$("#oldpwd").val();
 			var newpwd=$("#newpwd").val();
 			var renewpwd=$("#renewpwd").val();
@@ -153,10 +174,30 @@ define(function(require, exports, module) {
 			});
 		})
 		
-		$('.nav li').click(function(e) {
-			$('.nav li').removeClass('active');
+		//左侧菜单点击
+		$('.content .menu .nav li a').click(function(e) {
+			$(this).parent().siblings().removeClass('active');
 			//$(e.target).addClass('active');
-			$(this).addClass('active');
+			$(this).parent().addClass('active');
+			
+			var oper=$(this).attr("id");
+			switch (oper){
+				case "infoMenu":
+					self.getPublishInfos();
+					break;
+				case "advMenu":
+					self.getPublishAdvs();
+					break;
+				case "authMenu":
+					self.getAuths();
+					break;
+				case "logMenu":
+					self.getOperLog();
+					break;
+				default:
+					alert("操作错误,请重试！");
+					break;
+			}
 		});
 	}
 	

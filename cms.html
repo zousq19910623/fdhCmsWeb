@@ -28,7 +28,12 @@
 			
 			<div class="content">
 				<div class="menu">
-					
+					<ul class="nav">
+					    <li class="active"><a id="infoMenu" href="#">资讯管理</a></li>
+					    <li><a id="advMenu" href="#">广告管理</a></li>
+					    <li><a id="authMenu" href="#">权限管理</a></li>
+					    <li><a id="logMenu" href="#">操作日志</a></li>
+					</ul>
 				</div>
 				
 				<div class="contentTab">
@@ -36,17 +41,8 @@
 				</div>
 			</div>
 		</div>
-				
-		<!--<div class="page-header">
-			<img src="images/cmsTitle.png" />
-			<a id="logout" class="navbar-link titleInfo logoutMargin fa fa-sign-out">&nbsp;&nbsp;退出</a>
-			<span class="titleInfo titleMargin fa">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-			<a id="modifyPwd" data-toggle="modal" href="#modPassword" class="navbar-link titleInfo titleMargin fa fa-pencil ">修改密码</a>
-			<span class="titleInfo titleMargin fa">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-			<span id="uname" class="titleInfo titleMargin fa"></span>
-		</div>-->
 
-		<div class="floatLeft">
+		<!--<div class="floatLeft">
 			<ul class="nav nav-list bs-docs-sidenav affix-top">
 				<li class="active">
 					<a id="infoMenu" class="fa fa-newspaper-o">资讯管理</a>
@@ -61,7 +57,7 @@
 					<a id="logMenu" class="fa fa-pencil-square-o">操作日志</a>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 		
 		<ul id="infoTab" class="nav nav-tabs">
 			<li class="active">
@@ -215,12 +211,9 @@
 		</div>
 
 		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-		<!--<script src="https://cdn.bootcss.com/bootstrap-modal/2.2.6/js/bootstrap-modal.min.js"></script>-->
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdn.bootcss.com/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
 		<script src="http://cdn.bootcss.com/seajs/3.0.2/sea.js"></script>
-		<!--<script src="js/menu.js" type="text/javascript" charset="utf-8"></script>-->
-		<!--<script src="js/info.js" type="text/javascript" charset="utf-8"></script>-->
 		<script>
 			seajs.config({
 				base: "./",
